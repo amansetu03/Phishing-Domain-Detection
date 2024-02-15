@@ -26,7 +26,8 @@ def prediction():
     
     # Return the prediction as a JSON response
     #return jsonify({'prediction': prediction})
-    return render_template('home.html', Result=f"There is {prediction}% chance that url is malicious")
+    return render_template('home.html', Result=f"You are {100-prediction}% Safe.")
+    # return render_template('home.html', Result=f"There is {prediction}% chance that domain is m")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=33,debug=True)
